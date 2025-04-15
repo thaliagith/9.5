@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact Form</title>
-<meta charset="utf-8">
-<style>
-form { background-color:#eaeaea;
-     font-family: Arial, sans-serif;
-       padding: 10px; }
-label { float: left;
-      width: 100px;
-        clear: left;
-      text-align: right;
-      padding-right: 10px;
-      margin-top: 10px; }
-input, textarea { margin-top: 10px;
-                  display: block; }
-#mySubmit { margin-left: 110px; }
-</style>
+    <title>Contact Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Contact Us</h1>
-<form method="post" action="https://www.webdevbasics.net/scripts/demo.php">
-  <label for="myName">Name:</label>
-  <input type="text" name="myName" id="myName">
-  <label for="myEmail">E-mail:</label>
-  <input type="text" name="myEmail" id="myEmail">
-  <label for="myComments">Comments:</label>
-  <textarea name="myComments" id="myComments" rows="2" cols="20"></textarea>
-  <input id="mySubmit" type="submit" value="Submit">
-</form>
+    <h1>Contact Us</h1>
+
+    <form method="post" action="http://webdevbasics.net/scripts/demo.php">
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter your comments here..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <input type="submit" value="Contact" aria-label="Submit the contact form">
+                <input type="reset" value="Reset" aria-label="Reset the contact form">
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>
